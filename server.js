@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors'); // 👈 ADD THIS
 const dotenv = require('dotenv');
-const sequelize = require('./config/database');
+const sequelize = require('./Database/database');
 const routes = require('./routes');
-const User = require('./models/User');
+const User = require('./Database/models/User');
 
 dotenv.config();
 

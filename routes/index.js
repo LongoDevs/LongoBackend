@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const { rateUser } = require('../controllers/ratingController');
+const { rateUser } = require('../api/gamification/controllers/ratingController');
 const {
   getAllUsers,
   getNearbyUsers,
   getLeaderboard
-} = require('../controllers/userController');
+} = require('../api/gamification/controllers/userController');
 
 // Root welcome route
 router.get('/', (req, res) => {
@@ -19,7 +19,7 @@ router.get('/users', getAllUsers);
 // Get nearby users
 router.get('/users/nearby', getNearbyUsers);
 
-// Leaderboard endpoint 🏆
+// Leaderboard endpoint
 router.get('/leaderboard', getLeaderboard);
 
 // Submit rating
