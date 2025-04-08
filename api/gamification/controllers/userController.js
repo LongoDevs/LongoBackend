@@ -1,5 +1,5 @@
 const { Op } = require('sequelize');
-const User = require('../../../Database/models/User');
+const User = require('../../../Database/models/models');
 
 exports.getAllUsers = async (req, res) => {
   try {
